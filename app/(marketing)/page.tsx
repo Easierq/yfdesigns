@@ -21,7 +21,7 @@ function HeroPage() {
             Popular Quotes for all categories from millions of books, people,
             and authors.
           </p>
-          <div className="space-x-4">
+          <div className="space-x-1 md:space-x-2">
             <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started
             </Link>
