@@ -39,7 +39,7 @@ function HeroPage() {
             <img
               src="/temp.png"
               alt="Hero Image"
-              className="block lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg dark:hidden overflow-hidden md:overflow-auto lg:overflow-auto"
+              className="block lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg overflow-hidden md:overflow-auto lg:overflow-auto"
             />
           </div>
         </div>

@@ -32,7 +32,7 @@ export default async function MarketingLayout({
             <MainNav />
             <nav>
               <div className="md:flex">
-                <div className="flex items-center">
+                <div className="flex items-center gap-2">
                   <ModeToggle />
                   <Link
                     href="/login"

@@ -7,7 +7,7 @@ export const MobileToggle = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" className="md:hidden bg-none">
+        <Button variant="ghost" className="md:hidden bg-none p-0">
           <Menu className="h-9 w-9" />
         </Button>
       </SheetTrigger>
