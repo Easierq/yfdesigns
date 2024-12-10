@@ -21,7 +21,7 @@ export default function LoginPage() {
 
   return (
     <div className="">
-      <div className="flex h-[80vh] w-screen flex-col items-center justify-center px-[4%] lg:px-[7%]">
+      <div className="flex h-[80vh] w-full flex-col items-center justify-center px-[4%] lg:px-[7%]">
         <Link
           href="/"
           className={cn(

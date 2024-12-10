@@ -25,7 +25,7 @@ const NavbarSearch = () => {
       { skipEmptyString: true }
     );
 
-    router.push(url);
+    router.replace(url);
   };
   const onClear = () => {
     setValue("");
