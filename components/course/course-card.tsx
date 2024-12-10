@@ -4,7 +4,6 @@ import { BookOpen } from "lucide-react";
 
 import { IconBadge } from "./icon-badge";
 import { formatPrice } from "@/lib/format";
-import { CourseProgress } from "./course-progress";
 import Pulse from "@/app/(marketing)/_components/pulse-animation";
 
 interface CourseCardProps {

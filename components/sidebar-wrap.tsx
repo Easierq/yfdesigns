@@ -4,6 +4,7 @@ import { MobileDarkLight } from "./sidebar-dark-light";
 import { Video } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { SheetClose } from "./ui/sheet";
 
 export const SidebarWrap = () => {
   return (
@@ -17,7 +18,12 @@ export const SidebarWrap = () => {
           <p className="text-slate-400 mb-1">Courses</p>
           <div className="flex items-center gap-2 ml-1">
             <Video className="h-5 w-5" />
-            <p className="font-medium text-xs"> UI/UX</p>
+            <SheetClose asChild>
+              <Link href={`/courses`} className="block">
+                {/* <span className="font-medium text-xs">UI/UX</span> */}
+                <p className="font-medium text-xs"> UI/UX</p>
+              </Link>
+            </SheetClose>
           </div>
         </div>
         <div className="mt-auto">

@@ -39,7 +39,7 @@ export function MainNav() {
       <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent text-sm font-semibold ">
+            <NavigationMenuTrigger className="bg-transparent text-sm font-semibold">
               Getting started
             </NavigationMenuTrigger>
             <NavigationMenuContent>

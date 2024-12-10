@@ -8,11 +8,11 @@ const SearchPage = () => {
   return (
     <div className="pt-10 pb-[100px]">
       <div className="mb-10">
-        <h1 className="text-3xl font-medium">Courses page</h1>
+        <h1 className="text-2xl font-medium">Search results for blabla</h1>
       </div>
       <div className="mt-6">
         {/* <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4"> */}
-        <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+        <div className="grid gap-4 md:gap-5 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
           {items.map((item, index) => (
             <CourseCard
               key={index}

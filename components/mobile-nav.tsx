@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "@/node_modules/next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import React from "react";
@@ -24,6 +25,7 @@ function MobileNav() {
       onOpenChange={setOpen}
     >
       <span className="font-bold">YsDesigns</span>
+      {/* <Image src="/logo.svg" alt="Logo" height={60} width={200} /> */}
     </MobileLink>
   );
 }

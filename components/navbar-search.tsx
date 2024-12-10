@@ -8,7 +8,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "@/node_modules/next/link";
 import { cn } from "@/lib/utils";
 
-const NavbarSearch = () => {
+const NavbarSearch = ({ setOpen }: { setOpen: (value: boolean) => void }) => {
   const router = useRouter();
   const [value, setValue] = useState("");
 
@@ -24,8 +24,8 @@ const NavbarSearch = () => {
       },
       { skipEmptyString: true }
     );
-
-    router.replace(url);
+    router.push(url);
+    setOpen(false);
   };
   const onClear = () => {
     setValue("");
@@ -43,7 +43,7 @@ const NavbarSearch = () => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="SEARCHING FOR....."
-          className="w-full rounded-r-none border-none ring-0 focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 pl-0"
+          className="w-full font-medium text-base rounded-r-none border-none ring-0 focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 px-0"
         />
         {value && (
           <X

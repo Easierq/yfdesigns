@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
 export function MobileDarkLight({ className, ...props }: ButtonProps) {
-  const { isDark, toggle, hydrated } = useThemeToggle();
+  const { hydrated } = useThemeToggle();
   const { setTheme } = useTheme();
 
   // TODO: fix layout shift from hydration
@@ -27,7 +27,7 @@ export function MobileDarkLight({ className, ...props }: ButtonProps) {
         // title="Toggle theme"
         // aria-label="Toggle theme"
         {...props}
-        onClick={toggle}
+        onClick={() => setTheme("dark")}
       >
         <MoonIcon className="size-[1em]" />
       </Button>
@@ -41,7 +41,7 @@ export function MobileDarkLight({ className, ...props }: ButtonProps) {
         // title="Toggle theme"
         // aria-label="Toggle theme"
         {...props}
-        onClick={toggle}
+        onClick={() => setTheme("light")}
       >
         <Sun className="size-[1em]" />
       </Button>
