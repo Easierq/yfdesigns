@@ -1,6 +1,5 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -30,7 +29,6 @@ const NavbarRoutes = () => {
           </Button>
         </Link>
       )}
-      <UserButton afterSignOutUrl="/" />
     </div>
   );
 };

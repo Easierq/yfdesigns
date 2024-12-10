@@ -3,8 +3,6 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,7 +12,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Badge } from "./ui/badge";
+// import { Badge } from "./ui/badge";
+// import { QuickAccessIcon } from "./icons";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -34,10 +33,10 @@ const components: { title: string; href: string; description: string }[] = [
 export function MainNav() {
   return (
     <div className="md:flex w-full">
-      <Link href="/" className="lg:mr-6 sm:mr-0 flex items-center gap-2">
-        <span className="font-bold hidden lg:block md:block">YsDesigns</span>
+      <Link href="/" className="flex items-center mr-2">
+        <span className="font-bold hidden md:block">YsDesigns</span>
       </Link>
-      <NavigationMenu className="hidden lg:block">
+      <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-transparent text-sm font-semibold ">
@@ -51,7 +50,6 @@ export function MainNav() {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/"
                     >
-                      <Icons.logo className="h-6 w-6" />
                       <div className="mb-2 mt-4 text-lg font-bold">
                         YsDesigns
                       </div>

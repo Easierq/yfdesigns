@@ -1,17 +1,15 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Link from "@/node_modules/next/link";
 
-import { fontSans } from "@/lib/fonts";
-const inter = Inter({ subsets: ["latin"] });
-
 import { MainNav } from "@/components/main-nav";
-import MobileNav from "@/components/mobile-nav";
 import { buttonVariants } from "@/components/ui/button";
 import { ModeToggle } from "@/components/toggle";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileToggle } from "@/components/mobile-toggle";
+import { SearchToggle } from "@/components/search-toggle";
+import MobileNav from "@/components/mobile-nav";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,23 +24,24 @@ export default async function MarketingLayout({
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="h-16 sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="flex h-16 items-center justify-between py-6 w-full px-[4%] lg:px-[7%]">
+        <header className="h-14 sticky flex items-center top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="flex h-auto items-center justify-between w-full px-[4%] md:px-[7%]">
             <MobileNav />
             <MainNav />
             <nav>
               <div className="md:flex">
-                <div className="flex items-center gap-2">
-                  <ModeToggle />
+                <div className="flex items-center gap-2 md:gap-5">
+                  <SearchToggle />
                   <Link
                     href="/login"
                     className={cn(
                       buttonVariants({ variant: "default", size: "sm" }),
-                      "px-4"
+                      "px-4 h-8 font-semibold"
                     )}
                   >
                     Get Started
                   </Link>
+                  <ModeToggle />
                   <MobileToggle />
                 </div>
               </div>
@@ -51,10 +50,11 @@ export default async function MarketingLayout({
         </header>
         {/* <HeroPage /> */}
 
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 px-[4%] lg:px-[7%]">{children}</main>
       </div>
 
-      <SiteFooter />
+      {/* <SiteFooter /> */}
+      <Footer />
     </>
   );
 }

@@ -8,6 +8,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "@/node_modules/next/link";
 import React from "react";
+import { HeroTab } from "./_components/hero-tabs";
 
 function HeroPage() {
   return (
@@ -21,11 +22,14 @@ function HeroPage() {
             Popular Quotes for all categories from millions of books, people,
             and authors.
           </p>
-          <div className="space-x-1 md:space-x-2">
-            <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+          <div className="flex items-center gap-2 px-4">
+            <Link
+              href="/login"
+              className={cn(buttonVariants({ size: "lg" }), "font-semibold")}
+            >
               Get Started
             </Link>
-            <a
+            <Link
               href="/#features"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
@@ -33,7 +37,7 @@ function HeroPage() {
               )}
             >
               Let&apos;s Explore
-            </a>
+            </Link>
           </div>
           <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:max-w-[1000px] overflow-hidden md:overflow-auto lg:overflow-auto mt-12">
             <img
@@ -42,6 +46,7 @@ function HeroPage() {
               className="block lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg overflow-hidden md:overflow-auto lg:overflow-auto"
             />
           </div>
+          <HeroTab />
         </div>
       </section>
       <section id="open-source" className="container py-8 md:py-12 lg:py-24">

@@ -4,7 +4,7 @@ import { CourseCard } from "@/components/course/course-card";
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 10, 10];
 
-const SearchPage = () => {
+const Courses = () => {
   return (
     <div className="pt-10 pb-[100px]">
       <div className="mb-10">
@@ -36,4 +36,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default Courses;
