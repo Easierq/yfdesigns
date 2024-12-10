@@ -17,7 +17,7 @@ export const CoursesList = () => {
   return (
     <div className="mt-6">
       {/* <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4"> */}
-      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+      <div className="grid gap-4 gap-y-8 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
         {items.map((item, index) => (
           <CourseCard
             key={index}

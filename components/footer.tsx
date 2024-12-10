@@ -17,7 +17,7 @@ export default function Footer() {
             /> */}
             {/* LOGO */}
             <span className="font-bold">YsDesigns</span>
-            <p className="text-sm text-gray-600 text-center md:text-left dark:text-slate-200">
+            <p className="text-sm text-gray-600 text-left dark:text-slate-200">
               Your trusted partner in innovation and excellence.
             </p>
           </div>

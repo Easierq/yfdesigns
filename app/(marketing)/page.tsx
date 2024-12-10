@@ -14,7 +14,7 @@ function HeroPage() {
   return (
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-20">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center sm:mb-10 lg:mb-20 md:sm-20">
+        <div className="flex max-w-[64rem] flex-col items-center gap-4 text-center sm:mb-10 lg:mb-20">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-20">
             Infusing Wisdom into Your Every Mood
           </h1>
@@ -39,7 +39,7 @@ function HeroPage() {
               Let&apos;s Explore
             </Link>
           </div>
-          <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:max-w-[1000px] overflow-hidden md:overflow-auto lg:overflow-auto mt-12">
+          <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:max-w-[1000px] overflow-hidden md:overflow-auto lg:overflow-auto mt-8">
             <img
               src="/temp.png"
               alt="Hero Image"

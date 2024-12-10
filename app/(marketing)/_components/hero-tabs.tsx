@@ -4,7 +4,7 @@ import { CoursesList } from "@/components/course/courses-list";
 
 export const HeroTab = () => {
   return (
-    <div className="mt-8 w-full">
+    <div className="mt-6 w-full">
       <Tabs defaultValue="account" className="w-full">
         {/* <TabsList className="border border-black bg-slate-50"> */}
         <TabsList className="bg-purple-200">
