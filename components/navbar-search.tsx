@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "@/node_modules/next/link";
 import { cn } from "@/lib/utils";
+import { SheetClose } from "./ui/sheet";
 
 const NavbarSearch = ({ setOpen }: { setOpen: (value: boolean) => void }) => {
   const router = useRouter();
@@ -61,37 +62,46 @@ const NavbarSearch = ({ setOpen }: { setOpen: (value: boolean) => void }) => {
         </Button>
       </form>
       <div className="flex items-center justify-center flex-col md:flex-row mt-8">
-        <p className="text-sm font-semibold italic mb-1 md:mb-0">
+        <p className="hidden text-sm md:block font-semibold italic mb-1 md:mb-0">
           Popular Searches:
         </p>
+        <p className="text-sm md:hidden font-semibold italic mb-1 md:mb-0">
+          Popular Searches
+        </p>
         <div className="ml-3 flex gap-2">
-          <Link
-            href={`/search`}
-            className={cn(
-              buttonVariants({ variant: "default", size: "sm" }),
-              "px-4 h-7 text-[10px] font-bold"
-            )}
-          >
-            Adobe XD
-          </Link>
-          <Link
-            href={`/search`}
-            className={cn(
-              buttonVariants({ variant: "default", size: "sm" }),
-              "px-4 h-7 text-[10px] font-bold"
-            )}
-          >
-            Figma
-          </Link>
-          <Link
-            href={`/search`}
-            className={cn(
-              buttonVariants({ variant: "default", size: "sm" }),
-              "px-4 h-7 text-[10px] font-bold"
-            )}
-          >
-            Photoshop
-          </Link>
+          <SheetClose>
+            <Link
+              href={`/search`}
+              className={cn(
+                buttonVariants({ variant: "default", size: "sm" }),
+                "px-4 h-7 text-[10px] font-bold"
+              )}
+            >
+              Adobe XD
+            </Link>
+          </SheetClose>
+          <SheetClose>
+            <Link
+              href={`/search`}
+              className={cn(
+                buttonVariants({ variant: "default", size: "sm" }),
+                "px-4 h-7 text-[10px] font-bold"
+              )}
+            >
+              Figma
+            </Link>
+          </SheetClose>
+          <SheetClose>
+            <Link
+              href={`/search`}
+              className={cn(
+                buttonVariants({ variant: "default", size: "sm" }),
+                "px-4 h-7 text-[10px] font-bold"
+              )}
+            >
+              Photoshop
+            </Link>
+          </SheetClose>
         </div>
       </div>
     </div>

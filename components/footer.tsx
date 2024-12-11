@@ -71,7 +71,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link
-                  href="#"
+                  href="/frequently-asked-questions"
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   FAQ

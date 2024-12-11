@@ -1,10 +1,11 @@
 import React from "react";
 import { Logo } from "./logo";
 import { MobileDarkLight } from "./sidebar-dark-light";
-import { Video } from "lucide-react";
+import { Plus, Video } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { SheetClose } from "./ui/sheet";
+import { cn } from "@/lib/utils";
 
 export const SidebarWrap = () => {
   return (
@@ -14,6 +15,16 @@ export const SidebarWrap = () => {
           <Logo />
           <MobileDarkLight />
         </div>
+        <Link
+          href="/create-course"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "sm" }),
+            "px-2 lg:px-3 w-full h-12 font-semibold flex items-center justify-center gap-1 border-2 border-slate-900 mb-4"
+          )}
+        >
+          <Plus className="w-4 h-4 font-bold mb-[1px]" />
+          <p className="">Create course</p>
+        </Link>
         <div className="flex flex-col mb-2">
           <p className="text-slate-400 mb-1">Courses</p>
           <div className="flex items-center gap-2 ml-1">

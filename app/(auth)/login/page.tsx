@@ -22,7 +22,7 @@ export default function LoginPage() {
   return (
     <div className="">
       <div className="flex h-[80vh] w-full flex-col items-center justify-center px-[4%] lg:px-[7%]">
-        <Link
+        {/* <Link
           href="/"
           className={cn(
             buttonVariants({ variant: "ghost" }),
@@ -31,7 +31,7 @@ export default function LoginPage() {
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
           Back
-        </Link>
+        </Link> */}
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             {/* <Icons.logo className="mx-auto h-6 w-6" /> */}

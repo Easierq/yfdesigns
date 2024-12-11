@@ -10,6 +10,8 @@ import { MobileToggle } from "@/components/mobile-toggle";
 import { SearchToggle } from "@/components/search-toggle";
 import MobileNav from "@/components/mobile-nav";
 import Footer from "@/components/footer";
+import { UserDropDown } from "@/components/user-drop-down";
+import { Plus } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,6 +35,16 @@ export default async function MarketingLayout({
                 <div className="flex items-center gap-2 md:gap-5">
                   <SearchToggle />
                   <Link
+                    href="/create-course"
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "sm" }),
+                      "px-2 lg:px-3 h-8 font-semibold hidden md:flex items-center justify-center gap-1 border-2 border-slate-900"
+                    )}
+                  >
+                    <Plus className="w-4 h-4 font-bold mb-[1px]" />
+                    <p className="hidden lg:block">Create course</p>
+                  </Link>
+                  <Link
                     href="/login"
                     className={cn(
                       buttonVariants({ variant: "default", size: "sm" }),
@@ -41,6 +53,7 @@ export default async function MarketingLayout({
                   >
                     Get Started
                   </Link>
+                  <UserDropDown />
                   <ModeToggle />
                   <MobileToggle />
                 </div>

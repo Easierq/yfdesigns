@@ -23,11 +23,9 @@ export const CourseCard = () => {
     <Link href={`/courses/`}>
       <div className="group hover:shadow-sm transition overflow-hidden border rounded-lg p-2">
         <div className="relative w-full aspect-video rounded-md overflow-hidden">
-          <div className="absolute top-1 z-40 left-1 gap-1 flex rounded-md items-center justify-center p-1 px-2 bg-slate-100 dark:bg-slate-900">
+          <div className="absolute top-1 z-40 left-1 gap-1 flex rounded-sm items-center justify-center p-1 px-2 bg-slate-100 dark:bg-slate-900">
             <Pulse />
-            <p className="text-[10px] font-semibold dark:text-slate-100">
-              Online
-            </p>
+            <p className="text-[10px] font-bold dark:text-slate-100">Online</p>
           </div>
           <Image fill className="object-cover" alt="alt" src="/co.webp" />
         </div>
@@ -36,8 +34,8 @@ export const CourseCard = () => {
             How to make photoshop literals
           </div>
           <div className="flex text-center justify-between">
-            <p className="text-xs text-muted-foreground font-semibold">UI/UX</p>
-            <p className="text-xs text-muted-foreground font-bold">8 weeks</p>
+            <p className="text-xs text-slate-500 font-extrabold">UI/UX</p>
+            <p className="text-xs text-slate-500 font-bold">8 weeks</p>
           </div>
           {/* <div className="my-3 flex items-center gap-x-2 text-sm md:text-xs">
             <div className="flex items-center gap-x-1 text-slate-500">
@@ -54,7 +52,7 @@ export const CourseCard = () => {
               value={progress}
             />
           ) : ( */}
-          <p className="text-md md:text-sm font-medium text-slate-700">
+          <p className="text-md md:text-sm font-bold text-slate-800">
             ₦{formatPrice(120000)}
           </p>
           {/* )} */}

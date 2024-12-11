@@ -20,11 +20,14 @@ export const SearchToggle = () => {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button className="bg-transparent h-auto p-0 flex items-center justify-center hover:bg-transparent mr-1 md:mr-0">
-          <Search className="h-6 w-6 text-black dark:text-white md:hidden" />
+          <Search className="h-6 w-6 text-black dark:text-white lg:hidden" />
           <SearchForm />
         </Button>
       </SheetTrigger>
-      <SheetContent side="top" className="p-0 h-[70vh] md:h-[500px] flex gap-0">
+      <SheetContent
+        side="top"
+        className="p-0 h-auto pb-10 md:pb-0 md:h-[400px] flex gap-0"
+      >
         <NavbarSearch setOpen={setOpen} />
       </SheetContent>
     </Sheet>
