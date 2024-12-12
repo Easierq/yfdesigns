@@ -12,6 +12,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { SearchToggle } from "./search-toggle";
+import Image from "next/image";
 // import { Badge } from "./ui/badge";
 // import { QuickAccessIcon } from "./icons";
 
@@ -32,51 +34,34 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function MainNav() {
   return (
-    <div className="md:flex w-full">
-      <Link href="/" className="flex items-center mr-2">
-        <span className="font-bold hidden md:block">YsDesigns</span>
-      </Link>
-      <NavigationMenu className="hidden md:block">
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent text-sm font-semibold">
-              Getting started
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-1 p-4 md:w-[400px] lg:w-[500px]">
-                <li className="row">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <div className="mb-2 mt-4 text-lg font-bold">
-                        YsDesigns
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Do not underestimate what design can make to your day
-                        and life
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/courses">
-              <span className="text-sm font-semibold mr-4 cursor-pointer">
-                Courses
-              </span>
-            </Link>
-            <Link href="/pricing">
-              <span className="text-sm font-semibold cursor-pointer">
-                Pricing
-              </span>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+    <div className="w-full">
+      <div className="flex items-center gap-4">
+        <Link href="/" className="flex items-center pt-3">
+          {/* <span className="font-bold hidden md:block">YsDesigns</span> */}
+          <Image
+            src="/logo-new.svg"
+            alt="logo"
+            width={140}
+            height={40}
+            className="hidden md:block min-w-[140px]"
+          />
+        </Link>
+        <div className="hidden md:flex gap-4 items-center w-full">
+          <Link href="/courses">
+            <span className="text-sm font-semibold cursor-pointer">
+              Courses
+            </span>
+          </Link>
+          <Link href="/pricing">
+            <span className="text-sm font-semibold cursor-pointer">
+              Pricing
+            </span>
+          </Link>
+          <div className="w-[50%]">
+            <SearchToggle />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

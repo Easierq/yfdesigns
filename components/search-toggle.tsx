@@ -19,8 +19,8 @@ export const SearchToggle = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button className="bg-transparent h-auto p-0 flex items-center justify-center hover:bg-transparent mr-1 md:mr-0">
-          <Search className="h-6 w-6 text-black dark:text-white lg:hidden" />
+        <Button className="bg-transparent h-auto p-0 flex items-center justify-center hover:bg-transparent mr-1 md:mr-0 w-full">
+          <Search className="h-6 w-6 text-black dark:text-white flex md:hidden" />
           <SearchForm />
         </Button>
       </SheetTrigger>

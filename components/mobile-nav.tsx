@@ -1,13 +1,5 @@
 "use client";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "@/node_modules/next/link";
 import Image from "next/image";
@@ -21,11 +13,19 @@ function MobileNav() {
   return (
     <MobileLink
       href="/"
-      className="flex items-center lg:hidden sm:block md:hidden"
+      className="flex items-center lg:hidden sm:block md:hidden pt-2"
       onOpenChange={setOpen}
     >
-      <span className="font-bold">YsDesigns</span>
-      {/* <Image src="/logo.svg" alt="Logo" height={60} width={200} /> */}
+      <div className="flex items-center ml-[-8px]">
+        {/* <span className="font-bold hidden md:block">YsDesigns</span> */}
+        <Image
+          src="/logo-new.svg"
+          alt="logo"
+          width={140}
+          height={40}
+          className="block md:hidden min-w-[140px]"
+        />
+      </div>
     </MobileLink>
   );
 }

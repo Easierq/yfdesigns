@@ -18,8 +18,8 @@ export const SidebarWrap = () => {
         <Link
           href="/create-course"
           className={cn(
-            buttonVariants({ variant: "outline", size: "sm" }),
-            "px-2 lg:px-3 w-full h-12 font-semibold flex items-center justify-center gap-1 border-2 border-slate-900 mb-4"
+            buttonVariants({ variant: "ghost", size: "sm" }),
+            "px-2 lg:px-3 text-muted w-full h-12 font-semibold flex items-center justify-center gap-1 mb-4 bg-primary hover:bg-primary/75 hover:text-muted"
           )}
         >
           <Plus className="w-4 h-4 font-bold mb-[1px]" />

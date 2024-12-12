@@ -22,7 +22,7 @@ export const MobileToggle = () => {
           className="md:hidden bg-none p-0 hover:bg-transparent dark:hover:bg-transparent"
         >
           {/* <Menu className="h-9 w-9" /> */}
-          <QuickAccessIcon className="h-8 w-8 ml-2 hover:bg-none dark:hover:bg-none" />
+          <QuickAccessIcon className="h-8 w-7 ml-[2px] hover:bg-none dark:hover:bg-none mb-1" />
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="p-0 flex gap-0">

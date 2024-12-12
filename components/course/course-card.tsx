@@ -52,7 +52,7 @@ export const CourseCard = () => {
               value={progress}
             />
           ) : ( */}
-          <p className="text-md md:text-sm font-bold text-slate-800">
+          <p className="text-md md:text-sm font-bold text-slate-800 dark:text-slate-200">
             ₦{formatPrice(120000)}
           </p>
           {/* )} */}

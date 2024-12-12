@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 // import { ThemeProvider } from "@/components/theme-provider";
 // import { signIn } from 'next-auth/react';
 import { useToast } from "@/hooks/use-toast";
+import Image from "next/image";
 // import { title } from "process";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -71,6 +72,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           </Button>
         </div>
       </form> */}
+      {/* AUTHNEED */}
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t" />
@@ -86,13 +88,18 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         variant="outline"
         type="button"
         disabled={isLoading}
-        className="text-white border-2 border-purple-800 bg-purple-600 dark:bg-purple-600 hover:bg-purple-600/8"
+        className="text-black border-none border-2 dark:border-slate-200 bg-white hover:bg-slate-100"
       >
         {isLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
-          //   <Icons.gitHub className="mr-2 h-4 w-4" />
-          <Icons.google className="mr-2 h-[14px] w-[14px]" />
+          <Image
+            src="/google.png"
+            alt="google-img"
+            width={14}
+            height={14}
+            className="mr-2 h-[14px] w-[14px]"
+          />
         )}{" "}
         Google
       </Button>

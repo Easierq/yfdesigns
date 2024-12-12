@@ -27,13 +27,15 @@ export default async function MarketingLayout({
     <>
       <div className="flex min-h-screen flex-col">
         <header className="h-14 sticky flex items-center top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="flex h-auto items-center justify-between w-full px-[4%] md:px-[7%]">
+          <div className="flex h-auto items-center justify-between w-full px-[5%] md:px-[7%]">
             <MobileNav />
             <MainNav />
             <nav>
               <div className="md:flex">
                 <div className="flex items-center gap-2 md:gap-5">
-                  <SearchToggle />
+                  <div className="flex md:hidden">
+                    <SearchToggle />
+                  </div>
                   <Link
                     href="/create-course"
                     className={cn(
@@ -53,7 +55,7 @@ export default async function MarketingLayout({
                   >
                     Get Started
                   </Link>
-                  <UserDropDown />
+                  {/* <UserDropDown /> */}
                   <ModeToggle />
                   <MobileToggle />
                 </div>
@@ -63,7 +65,7 @@ export default async function MarketingLayout({
         </header>
         {/* <HeroPage /> */}
 
-        <main className="flex-1 px-[4%] lg:px-[7%]">{children}</main>
+        <main className="flex-1 px-[5%] md:px-[7%]">{children}</main>
       </div>
 
       {/* <SiteFooter /> */}
