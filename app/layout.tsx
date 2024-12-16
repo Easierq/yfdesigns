@@ -14,11 +14,12 @@ import { Inter } from "next/font/google";
 import { ToastProvider } from "@/components/providers/toaster-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Simplify | Your way.",
+  title: "Simplify | Your way to success.",
   description: "Simplifying your way to the top",
 };
 
@@ -40,6 +41,7 @@ export default function RootLayout({
             <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
           </div>
           <ToastProvider />
+          <ModalProvider />
           {children}
         </ThemeProvider>
       </body>

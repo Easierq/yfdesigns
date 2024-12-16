@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mx-auto px-[4%] lg:px-[7%] py-8">
+    <footer className="mx-auto px-[5%] lg:px-[7%] py-8">
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-2 max-w-[70%]">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo-new.svg"
+                src="/logo.svg"
                 alt="logo"
-                width={140}
-                height={40}
-                className="hidden md:block min-w-[140px] ml-[-12px]"
+                width={124}
+                height={32}
+                className="min-w-[124px]"
               />
             </Link>
             {/* LOGO */}
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="#"
+                  href="/courses"
                   className="text-gray-600 hover:text-gray-900 dark:text-slate-200"
                 >
                   Video Courses
@@ -36,7 +36,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/courses"
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   Live Classes
@@ -57,17 +57,17 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
-                  href="#"
+                  href=""
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   Support
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  href="#"
+                  href="/terms-of-use"
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   Terms of use
@@ -82,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-1 text-sm">
               <li>
                 <Link
-                  href="#"
+                  href="/about-us"
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   About Us
@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact-us"
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   Contact
@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/privacy"
                   className="text-gray-600 hover:text-gray-900  dark:text-slate-200"
                 >
                   Privacy Policy

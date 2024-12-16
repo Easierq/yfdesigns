@@ -61,7 +61,7 @@
 
 "use client";
 
-import { Sun, MoonIcon } from "lucide-react";
+import { Sun, MoonIcon, Moon } from "lucide-react";
 import { Button, type ButtonProps } from "@/components/ui/button";
 import { useThemeToggle } from "@/components/theme/useToggle";
 
@@ -78,7 +78,7 @@ export function ModeToggle({ className, ...props }: ButtonProps) {
       variant="ghost"
       size="icon"
       className={cn(
-        "hidden md:flex items-center justify-center text-2xl rounded-md ml-[-8px]",
+        "hidden md:flex items-center justify-center text-2xl rounded-md ml-[-8px] h-8 w-8 bg-accent",
         className
       )}
       // title="Toggle theme"

@@ -4,17 +4,23 @@
 // import { BorderBeam } from "@/components/magicui/border-beam";
 // import ShineBorder from "@/components/magicui/shine-border";
 // import { Companies } from "@/components/social-proof";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Link from "@/node_modules/next/link";
-import React from "react";
-import { HeroTab } from "./_components/hero-tabs";
-import { BentoGrid } from "@/components/bento-grid";
+
+// import { CarouselList } from "@/components/course/caro-list";
+// import Slider from "@/components/slider/Slider";
+import Slider from "@/components/slider/slider";
+import BannerSlider from "./_components/banner-slider";
+
+// import { buttonVariants } from "@/components/ui/button";
+// import { cn } from "@/lib/utils";
+// import Link from "@/node_modules/next/link";
+// import React from "react";
+// import { HeroTab } from "./_components/hero-tabs";
+// import { BentoGrid } from "@/components/bento-grid";
 
 function HeroPage() {
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-20">
+      {/* <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-20">
         <div className="flex max-w-[64rem] mx-auto flex-col items-center gap-4 text-center sm:mb-10 lg:mb-12">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-20">
             Infusing Wisdom into Your Every Mood
@@ -50,19 +56,42 @@ function HeroPage() {
           <HeroTab />
           <BentoGrid />
         </div>
-      </section>
-      <section id="open-source" className="container py-8 md:py-12">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Simplify - Unlock the Wisdom
-          </h2>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Let&apos;s Try Now -{" "}
-            <a href="/login" className="underline underline-offset-4">
-              Get Started
-            </a>
-            .{" "}
-          </p>
+      </section> */}
+      <section id="open-source" className="py-8 md:py-12">
+        <div className="pt-[-10px]">
+          <h1 className="text-2xl md:text-3xl text-slate-900 dark:text-slate-300 mb-2">
+            Welcome back 😎,
+          </h1>
+          {/* <div className="hidden md:block w-full h-auto mb-5 md:mb-7">
+            <img
+              src="/banner.svg"
+              alt="banner"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="block md:hidden aspect-video w-full h-auto mb-7">
+            <img
+              src="/banner-two.svg"
+              alt="banner"
+              className="h-full w-full object-contain"
+            />
+          </div> */}
+          <div className="mb-7 md:mb-6">
+            <BannerSlider />
+          </div>
+          <Slider />
+          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-4xl">
+              Simplify - Unlock the Wisdom
+            </h2>
+            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+              Let&apos;s Try Now -{" "}
+              <a href="/login" className="underline underline-offset-4">
+                Get Started
+              </a>
+              .{" "}
+            </p>
+          </div>
         </div>
       </section>
     </>

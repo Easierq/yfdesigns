@@ -16,14 +16,14 @@ function MobileNav() {
       className="flex items-center lg:hidden sm:block md:hidden pt-2"
       onOpenChange={setOpen}
     >
-      <div className="flex items-center ml-[-8px]">
+      <div className="flex items-center">
         {/* <span className="font-bold hidden md:block">YsDesigns</span> */}
         <Image
-          src="/logo-new.svg"
+          src="/logo.svg"
           alt="logo"
-          width={140}
-          height={40}
-          className="block md:hidden min-w-[140px]"
+          width={124}
+          height={32}
+          className="block md:hidden min-w-[124px]"
         />
       </div>
     </MobileLink>
